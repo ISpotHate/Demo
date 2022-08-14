@@ -29,7 +29,7 @@ if not text == "":
         data = requests.get(f'http://ispothate.eastus.cloudapp.azure.com:8000/isswearing?text={text}').json()
         if data['isswearing'] == True:
             st.write('Contains curse words!')
-            st.write(f'Censored text: " + \n + data["text"])
+            st.write("Censored text: " + \n + data["text"])
         else: 
             st.write('No curse words!!')
     elif type == 'Determine Sentiment (Emotion)':
