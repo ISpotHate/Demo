@@ -4,7 +4,13 @@ import json
 import pandas as pd
 
 st.info('API Documentation:  \n ' + \
-        '/all: Returns a list of all labels from the API ML model')
+        `/ishate -> Returns the confidence of HATE speech or NON_HATE speech` + \
+        `/ishomophobia -> Returns a boolean result of whether the text is homophobia or not` + \
+        `/isswearing -> Returns a boolean result of whether the text contains a curse word/offensive speech, and censors the text and returns it` + \
+        `/sentiment -> Returns the sentiment of the text (negative, neutral, or positive)` + \
+        `/intent -> Returns the intent of the text (confidence of speech being targeted, aggressive, or hateful)` + \
+        `/toxicity -> Returns whether the speech is toxic or not, as well as other labels (toxicity, severe_toxicity, obscene, threat, insult, identity_attack, sexual_explicit) + \`
+        `/returnlabels -> Returns every label (from above) methods`)
 
 type = st.selectbox('Type of API call', ('Detect Hate Speech', 'Detect Homophobia', 'Detect Swearing', 
                     'Determine Sentiment (Emotion)', 'Detect Intent', 'Detect Toxicity', 'Detect All'))
